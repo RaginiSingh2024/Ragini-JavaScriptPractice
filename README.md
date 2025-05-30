@@ -47,6 +47,8 @@ This repository contains my Day 3 JavaScript practice tasks. It includes fill-in
 20. The typeof operator returns the **data type** of a variable.  
 
 ---
+📸 𝐏𝐮𝐳𝐳𝐥𝐞 𝐏𝐫𝐞𝐯𝐢𝐞𝐰
+<img width="457" alt="Screenshot 2025-05-30 at 12 53 11 PM" src="https://github.com/user-attachments/assets/2beb16f7-563c-4210-b0f9-fc96f976736f" />
 
 ## 🎯 JavaScript Practice – Challenge Style Questions
 
@@ -149,11 +151,6 @@ Core concepts (function, return, event, length, typeof)
 
 DOM and logical values (dom, true, false)
 ...and more!
-
-
-📸 𝐏𝐮𝐳𝐳𝐥𝐞 𝐏𝐫𝐞𝐯𝐢𝐞𝐰
-
-<img width="549" alt="Screenshot 2025-05-30 at 12 45 16 PM" src="https://github.com/user-attachments/assets/812c5f8b-ebbf-4b82-8c3b-6288d2be78c3" />
 
 
 ACROSS
