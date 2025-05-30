@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Video API</title>
+</head>
+<body>
+  <video id="myVideo" width="400" controls>
+    <source src="sample.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <br>
+  <button onclick="playVideo()">Play</button>
+  <button onclick="pauseVideo()">Pause</button>
+  <button onclick="toggleMute()">Mute/Unmute</button>
+  <button onclick="jumpTo10()">Jump to 10s</button>
+  <p id="timeDisplay">Current Time: 0</p>
+
+  <script>
+    const video = document.getElementById('myVideo');
+    const timeDisplay = document.getElementById('timeDisplay');
+
+    // JS controls video playback
+    function playVideo() {
+      video.play();
+    }
+
+    function pauseVideo() {
+      video.pause();
+    }
+
+    // Video mute property
+    function toggleMute() {
+      video.muted = !video.muted;
+    }
+
+    // ontimeupdate event
+    video.ontimeupdate = function () {
+      timeDisplay.textContent = `Current Time: ${Math.floor(video.currentTime)}s`;
+    };
+
+    // Change video time with JS
+    function jumpTo10() {
+      video.currentTime = 10;
+    }
+  </script>
+</body>
+</html>

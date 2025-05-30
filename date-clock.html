@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date and Clock</title>
+</head>
+<body>
+  <h2 id="currentDate"></h2>
+  <h2 id="clock">Clock: </h2>
+  <button onclick="stopClock()">Stop Clock</button>
+
+  <h2 id="dateComparison"></h2>
+  <h2 id="timerDisplay">Timer: 0</h2>
+
+  <script>
+    // Date object
+    const now = new Date();
+    document.getElementById('currentDate').textContent = "Current Date/Time: " + now;
+
+    // setInterval()
+    let seconds = 0;
+    const clockInterval = setInterval(() => {
+      document.getElementById('clock').textContent = "Clock: " + new Date().toLocaleTimeString();
+    }, 1000);
+
+    // clearInterval()
+    function stopClock() {
+      clearInterval(clockInterval);
+    }
+
+    // Compare Dates
+    const date1 = new Date('2024-01-01');
+    const date2 = new Date('2025-01-01');
+    const comparison = date1 < date2 ? "Date1 is earlier" : "Date2 is earlier";
+    document.getElementById('dateComparison').textContent = comparison;
+
+    // Timer with stop at 10
+    let timer = 0;
+    const countUp = setInterval(() => {
+      if (timer <= 10) {
+        document.getElementById('timerDisplay').textContent = "Timer: " + timer;
+        timer++;
+      } else {
+        clearInterval(countUp);
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini To-Do App</title>
+  <style>
+    body { font-family: Arial; }
+    li { margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <h2>To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Enter task" />
+  <button onclick="addTask()">Add</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    // localStorage + dynamic DOM
+    const input = document.getElementById('taskInput');
+    const list = document.getElementById('taskList');
+
+    function loadTasks() {
+      const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+      list.innerHTML = "";
+      tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.textContent = task;
+        const del = document.createElement('button');
+        del.textContent = "Delete";
+        del.onclick = () => deleteTask(index);
+        li.appendChild(del);
+        list.appendChild(li);
+      });
+    }
+
+    function addTask() {
+      const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+      if (input.value.trim() !== "") {
+        tasks.push(input.value.trim());
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        input.value = "";
+        loadTasks();
+      }
+    }
+
+    function deleteTask(index) {
+      const tasks = JSON.parse(localStorage.getItem('tasks'));
+      tasks.splice(index, 1);
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+      loadTasks();
+    }
+
+    // Initial load
+    loadTasks();
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Traversal</title> HTML Nesting
+<!-- HTML nesting refers to placing HTML elements inside other elements in a structured way. Proper nesting ensures that tags open and close in the correct order, maintaining valid and readable HTML. -->
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="grandparent">
+    <div class="parent">
+      <div class="child">Child Div <button>Click Me</button></div>
+    </div>
+  </div>
+
+  <script>
+    // HTML nesting and DOM tree: Nested elements form a hierarchy (tree-like structure)
+
+    const child = document.querySelector('.child');
+
+    // parentElement: Accessing immediate parent
+    console.log("Parent of child:", child.parentElement);
+
+    // .children vs .childNodes
+    const parent = document.querySelector('.parent');
+    console.log("Children:", parent.children); // Only elements
+    console.log("Child nodes:", parent.childNodes); // Includes text, comments
+
+    // .closest()
+    console.log("Closest div to child with class 'grandparent':", child.closest('.grandparent'));
+
+    // Toggle class on parent when clicking child button
+    child.querySelector('button').addEventListener('click', function () {
+      const parentDiv = this.closest('.parent');
+      parentDiv.classList.toggle('highlight');
+    });
+  </script>
+</body>
+</html>
