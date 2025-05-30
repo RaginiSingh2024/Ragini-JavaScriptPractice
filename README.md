@@ -153,8 +153,7 @@ DOM and logical values (dom, true, false)
 
 📸 𝐏𝐮𝐳𝐳𝐥𝐞 𝐏𝐫𝐞𝐯𝐢𝐞𝐰
 
-<img width="679" alt="Screenshot 2025-05-30 at 12 42 52 PM" src="https://github.com/user-attachments/assets/fcf643bd-6028-42be-8a84-36960ccae2ae" />
-
+<img width="549" alt="Screenshot 2025-05-30 at 12 45 16 PM" src="https://github.com/user-attachments/assets/812c5f8b-ebbf-4b82-8c3b-6288d2be78c3" />
 
 
 ACROSS
