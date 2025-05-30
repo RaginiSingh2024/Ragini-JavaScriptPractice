@@ -48,6 +48,7 @@ This repository contains my Day 3 JavaScript practice tasks. It includes fill-in
 
 ---
 📸 𝐏𝐮𝐳𝐳𝐥𝐞 𝐏𝐫𝐞𝐯𝐢𝐞𝐰
+
 <img width="457" alt="Screenshot 2025-05-30 at 12 53 11 PM" src="https://github.com/user-attachments/assets/2beb16f7-563c-4210-b0f9-fc96f976736f" />
 
 ## 🎯 JavaScript Practice – Challenge Style Questions
